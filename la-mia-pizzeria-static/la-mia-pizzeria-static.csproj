@@ -8,6 +8,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Views\Pizza\Index.cshtml~RF3339a3cc.TMP" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Folder Include="Utils\" />
     <Folder Include="wwwroot\img\" />
   </ItemGroup>

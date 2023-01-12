@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations.Schema;
+﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace la_mia_pizzeria_static.Models
 {
@@ -7,16 +8,19 @@ namespace la_mia_pizzeria_static.Models
         public int ID { get; set; }
 
 		[Column(TypeName = "varchar(100)")]
-		public string Nome{ get; set; }
+        [StringLength(100, ErrorMessage = "Il campo titolo non può contenere più di 100 caratteri")]
+        public string Nome{ get; set; }
 
 		[Column(TypeName = "varchar(300)")]
-		public string Foto { get; set; }
+        [StringLength(300, ErrorMessage = "Il campo titolo non può contenere più di 300 caratteri")]
+        public string Foto { get; set; }
 
 		[Column(TypeName = "text")]
 		public string Descrizione { get; set; }
 
 		[Column(TypeName = "varchar(10)")]
-		public string Prezzo { get; set; }
+        [StringLength(10, ErrorMessage = "Il campo titolo non può contenere più di 10 caratteri")]
+        public string Prezzo { get; set; }
 
         public Pizza()
         {
